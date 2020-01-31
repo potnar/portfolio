@@ -1,0 +1,11 @@
+@import "../Navbar/Navbar.scss";
+@import "../../shared/styles/layout.scss";
+@import "../../shared/styles/colors.scss";
+
+.header-spacer {
+  min-height: $navbar-height;
+}
+header {
+  height: calc(100vh - #{$navbar-height});
+  background: $mustard;
+}

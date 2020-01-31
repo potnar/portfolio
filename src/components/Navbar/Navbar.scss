@@ -1,0 +1,33 @@
+@import "../../shared/styles/layout.scss";
+@import "../../shared/styles/colors.scss";
+
+$navbar-height: 60px;
+
+nav {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $oil_dark_nav;
+  .menu-item {
+    padding-right: $nav-margin;
+  }
+  .nav__logo {
+    width: 100%;
+    height: $navbar-height;
+  }
+  a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+:export {
+  navHeight: $navbar-height;
+}
