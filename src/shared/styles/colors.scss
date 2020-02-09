@@ -1,6 +1,6 @@
 $colors: (
   mustard: #af9459,
-  oil_dark: #19647e,
+  mainColor: #353434,
   oil_dark_nav: #12485a,
   oil_light: #119da4,
   gradient_dark: #26363a,
@@ -8,6 +8,7 @@ $colors: (
   dark_grey: rgb(75, 72, 72)
 );
 //
+$mainColor: map-get($colors, mainColor);
 $dark_grey: map-get($colors, dark_grey);
 $mustard: map-get($colors, mustard);
 $oil_light: map-get($colors, oil_light);
@@ -18,6 +19,7 @@ $gradient_light: map-get($colors, oil_light);
 
 //export do js
 :export {
+  main: $mainColor;
   mustardColor: $mustard;
   oil_lightColor: $oil_light;
   oil_darkColor: $oil_light;

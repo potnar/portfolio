@@ -3,7 +3,9 @@
 @import "./components/Navbar/Navbar.scss";
 
 body {
-  
+  margin: 0;
+  padding: 0;
+  background: $mainColor;
   .header-spacer {
     min-height: $navbar-height;
   }

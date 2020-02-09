@@ -1,44 +1,63 @@
 @import "../../shared/styles/layout.scss";
 @import "../../shared/styles/colors.scss";
 
-$navbar-height: 60px;
+$navbar-height: 80px;
 
 nav {
-  z-index: 1000;
   position: fixed;
   left: 0;
   top: 0;
   min-height: $navbar-height;
   display: flex;
   align-items: center;
-
   width: 100%;
-  background-color: $oil_dark_nav;
+  background-color: $mainColor;
   .menu-item {
-    &:first-child {
-      flex: 0 1 25%;
+    &:first-child img {
+      width: 40%;
     }
     &:nth-child(2) {
-      flex: 0 1 50%;
-      justify-content: center;
+      flex: 1;
     }
     &:last-child {
-      flex: 0 1 25%;
-      text-align: right;
-      padding-right: $nav-margin;
+      padding-right: 10px;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 0 0.5rem;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover,
+    a:active {
+      color: #458ede;
     }
   }
   .nav__logo {
     width: 100%;
     height: $navbar-height;
   }
-  a {
-    margin-left: 5px;
-    text-decoration: none;
-    color: white;
-  }
 }
 
 :export {
   navHeight: $navbar-height;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-toggle__button {
+    display: none;
+  }
 }
