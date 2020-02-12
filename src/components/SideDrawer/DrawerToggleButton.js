@@ -1,12 +1,23 @@
 import React from "react";
 import "./DrawerToggleButton.scss";
 
-const DrawerToggleButton = props => (
-  <button className="toggle-button" onClick={props.click}>
-    <div className="toggle-button__line" />
-    <div className="toggle-button__line" />
-    <div className="toggle-button__line" />
-  </button>
-);
+const DrawerToggleButton = props => {
+  let toggleClasses = "toggle-button";
+
+  if (props.anim) {
+    toggleClasses = "toggle-button active";
+    console.log(props.anim);
+  }
+  return (
+    <div className={toggleClasses} onClick={props.click}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  );
+};
 
 export default DrawerToggleButton;

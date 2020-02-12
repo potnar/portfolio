@@ -15,17 +15,17 @@ const Header = props => {
             passion...
           </p>
         </div>
-        <img src={comp} />
+        <img src={comp} alt="computer" />
         <a href="#content-section">
           <div id="arrowAnim">
-            <div class="arrowSliding">
-              <div class="arrow"></div>
+            <div className="arrowSliding">
+              <div className="arrow"></div>
             </div>
-            <div class="arrowSliding delay1">
-              <div class="arrow"></div>
+            <div className="arrowSliding delay1">
+              <div className="arrow"></div>
             </div>
-            <div class="arrowSliding delay2">
-              <div class="arrow"></div>
+            <div className="arrowSliding delay2">
+              <div className="arrow"></div>
             </div>
           </div>
         </a>

@@ -7,7 +7,7 @@ import NavLinks from "../NavLinks";
 class Navbar extends React.Component {
   render() {
     return (
-      <nav>
+      <nav className="navbar">
         <div className="menu-item">
           <img className="nav__logo" src={logo} alt="logo" />
         </div>
@@ -18,7 +18,10 @@ class Navbar extends React.Component {
           </ul>
         </div>
         <div className="menu-item nav-toggle__button">
-          <DrawerToggleButton click={this.props.drawerClickHandler} />
+          <DrawerToggleButton
+            click={this.props.drawerClickHandler}
+            anim={this.props.anim}
+          />
         </div>
       </nav>
     );

@@ -1,5 +1,10 @@
+@import "../Navbar/Navbar.scss";
+@import "../../shared/styles/layout.scss";
+@import "../../shared/styles/colors.scss";
+
 .side-drawer {
   display: flex;
+  position: fixed;
   height: 40%;
   width: 100%;
   background: #353434;
@@ -7,10 +12,10 @@
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   right: 0;
-  top: 0;
   z-index: 200;
   justify-content: center;
-  transform: translateY(-100%);
+  align-items: center;
+  transform: translateY(calc(100%+#{$navbar-height}));
   transition: transform 0.5s ease-in-out;
   a {
     text-decoration: none;
@@ -29,7 +34,7 @@
 }
 
 .side-drawer.open {
-  transform: translateY(0);
+  transform: translateY(calc(0+#{$navbar-height}));
 }
 
 @media (min-width: 769px) {

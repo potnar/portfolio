@@ -29,7 +29,10 @@ class App extends Component {
     }
     return (
       <div className="App" style={{ height: "100%" }}>
-        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <Navbar
+          drawerClickHandler={this.drawerToggleClickHandler}
+          anim={this.state.sideDrawerOpen}
+        />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <Header title="Junior Frontend Developer" />

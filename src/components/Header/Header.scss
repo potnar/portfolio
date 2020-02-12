@@ -67,36 +67,36 @@ header {
 @-webkit-keyframes slide {
   0% {
     opacity: 0;
-    transform: translatey(-12vh);
+    transform: translatey(-8vh);
   }
   20% {
     opacity: 1;
-    transform: translatey(-8vh);
+    transform: translatey(-2vh);
   }
   80% {
     opacity: 1;
-    transform: translatey(-4vh);
+    transform: translatey(2vh);
   }
   100% {
     opacity: 0;
-    transform: translatey(0vh);
+    transform: translatey(4vh);
   }
 }
 @keyframes slide {
   0% {
     opacity: 0;
-    transform: translatey(-12vh);
+    transform: translatey(-8vh);
   }
   20% {
     opacity: 1;
-    transform: translatey(-8vh);
+    transform: translatey(-2vh);
   }
   80% {
     opacity: 1;
-    transform: translatey(-4vh);
+    transform: translatey(2vh);
   }
   100% {
     opacity: 0;
-    transform: translatey(0vh);
+    transform: translatey(4vh);
   }
 }

@@ -3,7 +3,7 @@
 
 $navbar-height: 80px;
 
-nav {
+.navbar {
   position: fixed;
   left: 0;
   top: 0;
@@ -12,6 +12,7 @@ nav {
   align-items: center;
   width: 100%;
   background-color: $mainColor;
+  z-index: 1000;
   .menu-item {
     &:first-child img {
       width: 40%;
