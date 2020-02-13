@@ -1,8 +1,8 @@
 import React from "react";
-import "./SideDrawer.scss";
+import "./TopDrawer.scss";
 import NavLinks from "../NavLinks";
 
-const SideDrawer = props => {
+const TopDrawer = props => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer open";
@@ -17,4 +17,4 @@ const SideDrawer = props => {
   );
 };
 
-export default SideDrawer;
+export default TopDrawer;

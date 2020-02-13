@@ -6,7 +6,7 @@ class Content extends React.Component {
   render() {
     return (
       <div className="content" id="content-section">
-        <ContentNavbar clickProjects={this.clickHandlerOpenProjects} />
+        <ContentNavbar />
         <div className="carousel"></div>
       </div>
     );
