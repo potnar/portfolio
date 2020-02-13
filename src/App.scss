@@ -5,9 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: $mainColor;
-  .header-spacer {
-    min-height: $navbar-height;
-  }
   font-size: $main;
+  background: $mainColor;
+  .App {
+    height: "100%";
+    .header-spacer {
+      min-height: $navbar-height;
+    }
+  }
 }

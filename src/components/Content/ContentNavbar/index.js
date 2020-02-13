@@ -5,21 +5,20 @@ import ContentLinks from "../../ContentLinks";
 class ContentNavbar extends React.Component {
   state = { openProjects: false };
 
-  clickHandlerOpenProjects = () => {
+  handleClickOpenProjects = () => {
     this.setState(prevState => {
       return { openProjects: !prevState.openProjects };
     });
   };
 
   render() {
-    console.log(this.state.openProjects);
     return (
       <nav className="content-navbar">
         <div className="content__menu">
           <div className="content__menu-item"></div>
           <div className="content__menu-item">
             <h1>
-              <strong onClick={this.clickHandlerOpenProjects}>Projects</strong>
+              <strong onClick={this.handleClickOpenProjects}>Projects</strong>
             </h1>
           </div>
           <div className="content__menu-item"></div>

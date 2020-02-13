@@ -15,7 +15,7 @@ const Header = props => {
             passion...
           </p>
         </div>
-        <img src={comp} alt="computer" />
+        <img className="img-comp" src={comp} alt="computer" />
         <a href="#content-section">
           <div id="arrowAnim">
             <div className="arrowSliding">

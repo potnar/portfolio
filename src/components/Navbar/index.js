@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import logo from "../assets/logo/Logo2.svg";
-import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
+import DrawerToggleButton from "../TopDrawer/DrawerToggleButton";
 import NavLinks from "../NavLinks";
 
 class Navbar extends React.Component {

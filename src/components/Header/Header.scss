@@ -11,6 +11,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 50px;
+
   .title-text {
     padding-left: 20px;
     color: white;
@@ -98,5 +100,18 @@ header {
   100% {
     opacity: 0;
     transform: translatey(4vh);
+  }
+}
+
+@media (orientation: portrait) {
+  header {
+    align-items: flex-start;
+    .title-text {
+      position: relative;
+      top: 20%;
+    }
+    .img-comp {
+      display: none;
+    }
   }
 }

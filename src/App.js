@@ -22,19 +22,16 @@ class App extends Component {
   };
 
   render() {
-    let backdrop;
-
-    if (this.state.topDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
     return (
-      <div className="App" style={{ height: "100%" }}>
+      <div className="App">
         <Navbar
           drawerClickHandler={this.drawerToggleClickHandler}
           anim={this.state.topDrawerOpen}
         />
         <TopDrawer show={this.state.topDrawerOpen} />
-        {backdrop}
+        {this.state.topDrawerOpen && (
+          <Backdrop click={this.backdropClickHandler} />
+        )}
         <Header title="Junior Frontend Developer" />
         <Content />
       </div>

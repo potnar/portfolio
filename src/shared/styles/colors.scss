@@ -1,7 +1,8 @@
 $colors: (
   mustard: #af9459,
   mainColor: #353434,
-  font_hover: #458ede,
+  mainColorLight: #424242,
+  font_color_hover: #458ede,
   blur: #90e6f3,
   oil_light: #119da4,
   gradient_dark: #26363a,
@@ -10,8 +11,9 @@ $colors: (
 );
 //
 $mainColor: map-get($colors, mainColor);
+$mainColorLight: map-get($colors, mainColorLight);
 $dark_grey: map-get($colors, dark_grey);
-$font_hover: map-get($colors, font_hover);
+$font_color_hover: map-get($colors, font_color_hover);
 $blur: map-get($colors, blur);
 $mustard: map-get($colors, mustard);
 $oil_light: map-get($colors, oil_light);
@@ -23,8 +25,9 @@ $gradient_light: map-get($colors, oil_light);
 //export do js
 :export {
   main: $mainColor;
+  mainLight: $mainColorLight;
   mustardColor: $mustard;
-  font_hoverColor: $font_hover;
+  font_hoverColor: $font_color_hover;
   blurColor: $blur;
   oil_lightColor: $oil_light;
   oil_darkColor: $oil_dark_nav;

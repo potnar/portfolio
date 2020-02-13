@@ -1,18 +1,16 @@
+@import "../../Navbar/Navbar.scss";
+@import "../../../shared/styles/layout.scss";
+@import "../../../shared/styles/colors.scss";
+
 .content__menu {
-  position: relative;
+  position: absolute;
+  width: 100%;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #353434;
-  menu-item {
-    &:first-child {
-      flex-grow: 1;
-    }
-    &:last-child {
-      flex-grow: 1;
-    }
-  }
+  background: $mainColorLight;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 strong {
@@ -23,25 +21,25 @@ strong {
 }
 
 strong:hover {
-  color: #458ede;
+  color: $font_color_hover;
 }
 
 .content-links {
-  text-align: center;
-  transform: translateY(-130%);
+  position: absolute;
+  width: 100%;
+  transform: translateY(-23%);
   transition: transform 1s ease-in-out;
   a {
     text-decoration: none;
     color: white;
   }
   ul {
+    text-align: center;
     padding-inline-start: 0px !important;
     list-style: none;
   }
 }
 
 .content-links.open {
-  padding-top: 0;
-  height: 20%;
-  transform: translateY(0);
+  transform: translateY(80%);
 }
