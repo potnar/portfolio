@@ -3,6 +3,7 @@ $colors: (
   mainColor: #353434,
   mainColorLight: #424242,
   font_color_hover: #458ede,
+  font_color_active: #0d6ed6,
   blur: #90e6f3,
   oil_light: #119da4,
   gradient_dark: #26363a,
@@ -13,6 +14,7 @@ $colors: (
 $mainColor: map-get($colors, mainColor);
 $mainColorLight: map-get($colors, mainColorLight);
 $dark_grey: map-get($colors, dark_grey);
+$font_color_active: map-get($colors, font_color_active);
 $font_color_hover: map-get($colors, font_color_hover);
 $blur: map-get($colors, blur);
 $mustard: map-get($colors, mustard);
@@ -27,6 +29,7 @@ $gradient_light: map-get($colors, oil_light);
   main: $mainColor;
   mainLight: $mainColorLight;
   mustardColor: $mustard;
+  fontColorActive: $font_color_active;
   font_hoverColor: $font_color_hover;
   blurColor: $blur;
   oil_lightColor: $oil_light;

@@ -1,0 +1,19 @@
+.carousel {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  border: 2px solid red;
+  box-sizing: border-box;
+  .carousel__item {
+    &:first-child {
+      margin-left: calc(var(--step) * -100%);
+    }
+    border: 2px solid blue;
+    box-sizing: border-box;
+    height: 200vh;
+    transition: margin-left 0.4s;
+    background-color: green;
+    position: relative;
+    width: 100%;
+  }
+}

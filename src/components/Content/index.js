@@ -30,7 +30,7 @@ class Content extends React.Component {
         <ContentNavbar
           isOpen={this.state.openProjects}
           onOpen={this.handleClickOpenProjects}
-        />
+        ></ContentNavbar>
       </div>
     );
   }

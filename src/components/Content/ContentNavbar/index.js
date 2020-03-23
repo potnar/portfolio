@@ -1,23 +1,27 @@
 import React from "react";
 import "./ContentNavbar.scss";
 import ContentLinks from "../../ContentLinks";
+import Carousel from "./Carousel";
 
-class ContentNavbar extends React.Component {
-  render() {
-    return (
-      <nav className="content-navbar">
-        <div className="content__menu">
-          <div className="content__menu-item"></div>
-          <div className="content__menu-item">
-            <h1>
-              <strong onClick={this.props.onOpen}>Projects</strong>
-            </h1>
-          </div>
-          <div className="content__menu-item"></div>
+const ContentNavbar = () => {
+  const [active, setActive] = React.useState(0);
+
+  return (
+    <nav className="content-navbar">
+      <div className="content-navbar__item">
+        <h1>
+          <strong>Projects</strong>
+        </h1>
+      </div>
+
+      <div className="content-navbar__item">
+        <div className="content-links">
+          <ContentLinks active={active} onLinkClick={item => setActive(item)} />
         </div>
-      </nav>
-    );
-  }
-}
+      </div>
+      <Carousel step={active} />
+    </nav>
+  );
+};
 
 export default ContentNavbar;

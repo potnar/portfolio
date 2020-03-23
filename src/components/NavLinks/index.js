@@ -5,7 +5,9 @@ const NavLinks = props => {
   return sections.map(section => {
     return (
       <li>
-        <a href={`#${section}`}>{section}</a>
+        <a onClick={props.onLinkClick} href={`#${section}`}>
+          {section}
+        </a>
       </li>
     );
   });
