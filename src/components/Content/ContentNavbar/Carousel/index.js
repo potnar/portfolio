@@ -29,7 +29,7 @@ const Carousel = props => {
 Carousel.defaultProps = {
   items: [
     { content: <div>tte</div> },
-    { content: "oooweasdsadwqewqr" },
+    { content: <div>sss</div> },
     { content: <div>ppp</div> }
   ]
 };

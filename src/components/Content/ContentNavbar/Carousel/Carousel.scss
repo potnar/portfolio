@@ -1,16 +1,20 @@
 .carousel__wrapper {
   overflow-x: hidden;
-  width: 100%;
+  width: calc(100vw - 22px);
   position: relative;
 
   .carousel {
     display: flex;
     width: calc(var(--n) * 100vw);
     .carousel__item {
+      width: 100vw;
+      height: 200vh;
+      position: relative;
       &:first-child {
-        margin-left: calc(var(--step) * -100%);
+        margin-left: calc(var(--step) * -100vw);
       }
       &:nth-child(1) {
+        transition: margin-left 0.4s;
         background-color: green;
       }
       &:nth-child(2) {
@@ -19,13 +23,9 @@
       &:nth-child(3) {
         background-color: yellow;
       }
-      height: 200vh;
-      transition: margin-left 0.4s;
-      position: relative;
-      width: 100%;
 
       .carousel__item__content {
-        display: absolute;
+        position: absolute;
         width: 100%;
         height: 100%;
       }
