@@ -7,15 +7,18 @@ const Carousel = props => {
   }
   return (
     <div className="carousel__wrapper">
-      <div className="carousel" style={{
-        "--step": props.step,
-        "--n": props.items.length
-      }}>
+      <div
+        className="carousel"
+        style={{
+          "--step": props.step,
+          "--n": props.items.length
+        }}
+      >
         {props.items.map(item => (
           <div className="carousel__item">
-           <div className="carousel__item__content">
-            {item.content || null}
-           </div>
+            <div className="carousel__item__content">
+              {item.content || null}
+            </div>
           </div>
         ))}
       </div>
@@ -25,9 +28,9 @@ const Carousel = props => {
 
 Carousel.defaultProps = {
   items: [
-    { content: <div>lalalala</div> },
-    {},
-    {}
+    { content: <div>tte</div> },
+    { content: "oooweasdsadwqewqr" },
+    { content: <div>ppp</div> }
   ]
 };
 
