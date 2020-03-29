@@ -1,16 +1,15 @@
 import React from "react";
-import contentSections from "shared/globals/contentSections";
 
 const ContentLinks = props => {
-  return contentSections.map((contentSections, index) => {
+  return props.projects.map((project, index) => {
     return (
       <li>
         <a
           onClick={() => props.onLinkClick(index)}
           data-state={index === props.active ? "active" : ""}
-          href={`#${contentSections}`}
+          href={`#${project.title}`}
         >
-          {contentSections}
+          {project.title}
         </a>
       </li>
     );

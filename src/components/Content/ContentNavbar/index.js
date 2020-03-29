@@ -2,6 +2,7 @@ import React from "react";
 import "./ContentNavbar.scss";
 import ContentLinks from "../../ContentLinks";
 import Carousel from "./Carousel";
+import projects from "shared/globals/projects";
 
 const ContentNavbar = () => {
   const [active, setActive] = React.useState(0);
@@ -16,10 +17,14 @@ const ContentNavbar = () => {
 
       <div className="content-navbar__item">
         <div className="content-links">
-          <ContentLinks active={active} onLinkClick={item => setActive(item)} />
+          <ContentLinks
+            projects={projects}
+            active={active}
+            onLinkClick={item => setActive(item)}
+          />
         </div>
       </div>
-      <Carousel step={active} />
+      <Carousel step={active} items={projects} />
     </nav>
   );
 };

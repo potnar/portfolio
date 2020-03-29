@@ -1,5 +1,6 @@
 import React from "react";
 import "./Carousel.scss";
+import ProjectFamily from "./ProjectFamily";
 
 const Carousel = props => {
   if (!props.items) {
@@ -17,7 +18,7 @@ const Carousel = props => {
         {props.items.map(item => (
           <div className="carousel__item">
             <div className="carousel__item__content">
-              {item.content || null}
+              <ProjectFamily projects={item.projects} />
             </div>
           </div>
         ))}

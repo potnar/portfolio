@@ -1,0 +1,54 @@
+.project {
+  position: relative;
+  width: 100%;
+  margin: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  height: auto;
+  .img-box {
+    transition: transform 0.4s;
+    img {
+      transition: filter 0.4s;
+      max-width: 100%;
+    }
+  }
+  .desc-box {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 0.4s;
+    .desc {
+      transition: font-size 0.4s;
+      padding: 10px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+.project:hover {
+  .img-box {
+    transform: scale(1.2);
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  .desc-box {
+    opacity: 0.7;
+    .desc {
+      font-size: 1.2em;
+    }
+  }
+}
