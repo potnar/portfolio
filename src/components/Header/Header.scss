@@ -5,7 +5,7 @@
 .header-spacer {
   min-height: $navbar-height;
 }
-header {
+.header-content header {
   height: calc(100vh - #{$navbar-height});
   background: $mainColor;
   display: flex;

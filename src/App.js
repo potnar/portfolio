@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import TopDrawer from "./components/TopDrawer/TopDrawer";
 import Backdrop from "./components/Backdrop";
+import Technologies from "./components/Technologies";
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
         )}
         <Header title="Junior Frontend Developer" />
         <Content />
+        <Technologies />
       </div>
     );
   }
