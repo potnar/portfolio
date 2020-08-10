@@ -7,13 +7,16 @@ import Content from "./components/Content";
 import TopDrawer from "./components/TopDrawer/TopDrawer";
 import Backdrop from "./components/Backdrop";
 import Technologies from "./components/Technologies";
+import AboutMe from "./components/AboutMe";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
-    topDrawerOpen: false
+    topDrawerOpen: false,
   };
   drawerToggleClickHandler = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { topDrawerOpen: !prevState.topDrawerOpen };
     });
   };
@@ -34,8 +37,11 @@ class App extends Component {
           <Backdrop click={this.backdropClickHandler} />
         )}
         <Header title="Junior Frontend Developer" />
+        <AboutMe />
         <Content />
         <Technologies />
+        <ContactForm />
+        <Footer />
       </div>
     );
   }
