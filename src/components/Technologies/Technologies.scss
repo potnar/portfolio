@@ -3,20 +3,28 @@
 @import "../../shared/styles/colors.scss";
 
 .container-technologies {
+  padding: 20px 0;
   nav {
     color: #ffffff;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 0;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
+    background: $mainColorLight;
   }
   .container {
-    margin-top: 50px;
+    padding: 60px 0;
     display: flex;
     justify-content: center;
     width: 100%;
     picture {
-      width: 5%;
+      width: 6%;
+    }
+    picture:nth-child(odd) {
       margin: 5px 20px 5px 0;
+    }
+    picture:nth-child(even) {
+      margin: 5px 0 5px 20px;
     }
     article {
       box-shadow: 0px 0px 10px 5px #494949;
