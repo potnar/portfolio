@@ -7,9 +7,9 @@ import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 const TechnologiesContent = (props) => {
   return (
     <div>
-      <CircularProgressbarWithChildren value={30}>
+      <CircularProgressbarWithChildren value={props.progressValue}>
         <img
-          style={{ width: "80%", marginTop: -5 }}
+          style={{ width: "60%", marginTop: -10 }}
           src={`${props.icon}`}
           alt="REACT"
         />
