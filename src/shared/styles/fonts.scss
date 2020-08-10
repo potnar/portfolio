@@ -1,5 +1,17 @@
+@font-face {
+  font-family: bobas;
+  src: url("../../font/BebasNeue/OTF/BebasNeueOTF.otf");
+}
+@font-face {
+  font-family: merriweather;
+  src: url("../../font/Merriweather-Regular.ttf");
+}
 $main: 16px;
+$main-family: "merriweather";
+$family: bobas;
 
 :export {
-  margin: $main;
+  size: $main;
+  main: $main-family;
+  family: $family;
 }
