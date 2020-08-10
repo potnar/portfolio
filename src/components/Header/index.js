@@ -1,8 +1,24 @@
 import React from "react";
 import "./Header.scss";
 import comp from "../assets/komp.svg";
+// import React, { useRef } from "react";
 
-const Header = props => {
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+// // General scroll to element function
+
+// const ScrollDemo = () => {
+
+//    const myRef = useRef(null)
+//    const executeScroll = () => scrollToRef(myRef)
+
+//    return (
+//       <>
+//          <div ref={myRef}>I wanna be seen</div>
+//          <button onClick={executeScroll}> Click to scroll </button>
+//       </>
+//    )
+// }
+const Header = (props) => {
   return (
     <div className="header-content">
       <div className="header-spacer"></div>
@@ -16,7 +32,7 @@ const Header = props => {
           </p>
         </div>
         <img className="img-comp" src={comp} alt="computer" />
-        <a href="#content-section">
+        <a href="#about-section">
           <div id="arrowAnim">
             <div className="arrowSliding">
               <div className="arrow"></div>
