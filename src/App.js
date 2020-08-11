@@ -11,7 +11,7 @@ import AboutMe from "./components/AboutMe";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
-class App extends Component {
+class Portfolio extends Component {
   state = {
     topDrawerOpen: false,
   };
@@ -47,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Portfolio;

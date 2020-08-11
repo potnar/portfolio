@@ -11,7 +11,7 @@ import TechnologiesContent from "./TechnologiesContent";
 const Technologies = () => {
   return (
     <div className="container-technologies">
-      <nav>
+      <nav id="technologies">
         <h1>Technologies</h1>
       </nav>
       <section>

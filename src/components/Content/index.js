@@ -9,24 +9,24 @@ class Content extends React.Component {
   }
 
   handleClickOpenProjects = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { openProjects: !prevState.openProjects };
     });
   };
 
-  onChange = e => {
+  onChange = (e) => {
     console.log("onChange, ", e);
   };
 
-  onClickItem = e => {
+  onClickItem = (e) => {
     console.log("onClickItem, ", e);
   };
-  onClickThumb = e => {
+  onClickThumb = (e) => {
     console.log("onClickThumb, ", e);
   };
   render() {
     return (
-      <div className="content" id="content-section">
+      <div className="content" id="projects">
         <ContentNavbar
           isOpen={this.state.openProjects}
           onOpen={this.handleClickOpenProjects}

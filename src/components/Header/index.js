@@ -20,7 +20,7 @@ import comp from "../assets/komp.svg";
 // }
 const Header = (props) => {
   return (
-    <div className="header-content">
+    <div className="header-content" id="home">
       <div className="header-spacer"></div>
       <header>
         <div className="title-text">

@@ -35,7 +35,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <section className="contact-form__section" id="contact">
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
@@ -73,7 +73,7 @@ class ContactForm extends React.Component {
             Submit
           </button>
         </form>
-      </div>
+      </section>
     );
   }
   onNameChange(event) {
