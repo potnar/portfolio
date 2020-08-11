@@ -2,7 +2,7 @@ import React from "react";
 import "./TopDrawer.scss";
 import NavLinks from "../NavLinks";
 
-const TopDrawer = props => {
+const TopDrawer = (props) => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer open";
@@ -10,9 +10,7 @@ const TopDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <div className="spacer"></div>
-      <ul>
-        <NavLinks />
-      </ul>
+      <NavLinks />
     </nav>
   );
 };

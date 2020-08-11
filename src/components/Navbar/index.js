@@ -13,9 +13,7 @@ class Navbar extends React.Component {
         </div>
         <div className="menu-item"></div>
         <div className="menu-item nav-links">
-          <ul>
-            <NavLinks />
-          </ul>
+          <NavLinks />
         </div>
         <div className="menu-item nav-toggle__button">
           <DrawerToggleButton
