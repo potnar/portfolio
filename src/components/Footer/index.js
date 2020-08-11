@@ -39,7 +39,6 @@ const Footer = () => {
         <div className="col">
           <div className="address">
             <h3>Mikołaj Cholewa</h3>
-            <p>Opaczewska 36/11 </p>
             <p>Warsaw</p>
           </div>
         </div>

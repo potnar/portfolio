@@ -10,9 +10,7 @@ const ContentNavbar = () => {
   return (
     <nav className="content-navbar">
       <div className="content-navbar__item">
-        <h1>
-          <strong>Projects</strong>
-        </h1>
+        <h1>Projects</h1>
       </div>
 
       <div className="content-navbar__item">
@@ -20,7 +18,7 @@ const ContentNavbar = () => {
           <ContentLinks
             projects={projects}
             active={active}
-            onLinkClick={item => setActive(item)}
+            onLinkClick={(item) => setActive(item)}
           />
         </div>
       </div>

@@ -24,7 +24,6 @@
     .content-links {
       display: flex;
       justify-content: space-between;
-      width: 30%;
       padding: 10px 0;
       li {
         list-style: none;
@@ -45,7 +44,7 @@
   }
 }
 
-strong {
+h1 {
   cursor: pointer;
   color: white;
   -webkit-transition: color 0.4s; /* For Safari 3.0 to 6.0 */
@@ -71,3 +70,14 @@ strong {
 // .content-links.open {
 //   transform: translateY(80%);
 // }
+
+@media (orientation: landscape) {
+  .content-links {
+    width: 30%;
+  }
+}
+@media (orientation: portrait) {
+  .content-links {
+    width: 95%;
+  }
+}

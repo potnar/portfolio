@@ -8,7 +8,6 @@
     color: #ffffff;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
     background: $mainColorLight;
   }
@@ -17,9 +16,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    picture {
-      width: 6%;
-    }
+
     picture:nth-child(odd) {
       margin: 5px 20px 5px 0;
     }
@@ -30,7 +27,6 @@
       box-shadow: 0px 0px 10px 5px #494949;
       padding: 10px;
       color: #ffffff;
-      width: 20%;
       p {
         padding: 0;
         margin: 0;
@@ -39,5 +35,23 @@
         margin-bottom: 10px;
       }
     }
+  }
+}
+@media (orientation: landscape) {
+  .container-technologies picture {
+    width: 6%;
+  }
+  .container-technologies article {
+    width: 20%;
+  }
+}
+
+@media (orientation: portrait) {
+  .container-technologies picture {
+    width: 20%;
+  }
+  .container-technologies article {
+    width: 60%;
+    font-size: 0.8rem;
   }
 }

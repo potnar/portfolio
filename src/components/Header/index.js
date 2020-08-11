@@ -32,7 +32,7 @@ const Header = (props) => {
           </p>
         </div>
         <img className="img-comp" src={comp} alt="computer" />
-        <a href="#about-section">
+        <a href="">
           <div id="arrowAnim">
             <div className="arrowSliding">
               <div className="arrow"></div>

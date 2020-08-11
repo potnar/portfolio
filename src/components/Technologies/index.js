@@ -11,14 +11,16 @@ import TechnologiesContent from "./TechnologiesContent";
 const Technologies = () => {
   return (
     <div className="container-technologies">
-      <nav>Technologies</nav>
+      <nav>
+        <h1>Technologies</h1>
+      </nav>
       <section>
         <div className="container">
           <picture>
             <TechnologiesContent icon={js_logo} progressValue={60} />
           </picture>
           <article>
-            <p>JavaScript</p>
+            <h3>JavaScript</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -32,7 +34,7 @@ const Technologies = () => {
         </div>
         <div className="container">
           <article>
-            <p>REACT</p>
+            <h3>REACT</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -52,7 +54,7 @@ const Technologies = () => {
             <TechnologiesContent icon={html5_logo} progressValue={70} />
           </picture>
           <article>
-            <p>HTML5</p>
+            <h3>HTML5</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -66,7 +68,7 @@ const Technologies = () => {
         </div>
         <div className="container">
           <article>
-            <p>CSS3</p>
+            <h3>CSS3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -86,7 +88,7 @@ const Technologies = () => {
             <TechnologiesContent icon={php7_logo} progressValue={40} />
           </picture>
           <article>
-            <p>PHP</p>
+            <h3>PHP</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -100,7 +102,7 @@ const Technologies = () => {
         </div>
         <div className="container">
           <article>
-            <p>OTHER TECHNOLOGIES</p>
+            <h3>OTHER TECHNOLOGIES</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

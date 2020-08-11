@@ -104,11 +104,13 @@
 }
 
 @media (orientation: portrait) {
-  header {
-    align-items: flex-start;
+  .header-content header {
+    height: 100vh;
+    .arrowSliding {
+      top: 100%;
+    }
     .title-text {
       position: relative;
-      top: 20%;
     }
     .img-comp {
       display: none;
