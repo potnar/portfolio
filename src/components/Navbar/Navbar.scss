@@ -15,14 +15,17 @@ $navbar-height: 80px;
   z-index: 1000;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   .menu-item {
-    &:first-child img {
-      width: 40%;
+    &:first-child {
+      padding-left: 20px;
+      img {
+        width: 40%;
+      }
     }
     &:nth-child(2) {
       flex: 1;
     }
     &:last-child {
-      padding-right: 10px;
+      padding-right: 30px;
     }
     ul {
       list-style: none;
@@ -33,7 +36,11 @@ $navbar-height: 80px;
     li {
       padding: 0 0.5rem;
     }
+    .active-links {
+      border-bottom: 2px solid $font_color_hover;
+    }
     a {
+      cursor: pointer;
       text-decoration: none;
       color: white;
     }
@@ -48,8 +55,8 @@ $navbar-height: 80px;
   }
 }
 
-:export {
-  navHeight: $navbar-height;
+.navbar .nav-links {
+  padding-right: 20px;
 }
 
 @media (max-width: 768px) {
@@ -62,4 +69,8 @@ $navbar-height: 80px;
   .nav-toggle__button {
     display: none;
   }
+}
+
+:export {
+  navHeight: $navbar-height;
 }
