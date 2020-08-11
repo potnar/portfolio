@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import comp from "../assets/komp.svg";
+import { Link } from "react-scroll";
 // import React, { useRef } from "react";
 
 // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
@@ -32,7 +33,14 @@ const Header = (props) => {
           </p>
         </div>
         <img className="img-comp" src={comp} alt="computer" />
-        <a href="">
+        <Link
+          activeClass="active-links"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-86}
+          duration={100}
+        >
           <div id="arrowAnim">
             <div className="arrowSliding">
               <div className="arrow"></div>
@@ -44,7 +52,7 @@ const Header = (props) => {
               <div className="arrow"></div>
             </div>
           </div>
-        </a>
+        </Link>
       </header>
     </div>
   );
