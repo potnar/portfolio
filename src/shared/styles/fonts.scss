@@ -1,17 +1,16 @@
 @font-face {
-  font-family: bobas;
-  src: url("../../font/BebasNeue/OTF/BebasNeueOTF.otf");
+  font-family: merriweather;
+  src: url("../../font/merry/Merriweather-Regular.ttf");
 }
 @font-face {
-  font-family: merriweather;
-  src: url("../../font/Merriweather-Regular.ttf");
+  font-family: Roboto;
+  src: url("../../font/roboto/Roboto-Regular.ttf");
 }
+
 $main: 16px;
 $main-family: "merriweather";
-$family: bobas;
 
 :export {
   size: $main;
   main: $main-family;
-  family: $family;
 }

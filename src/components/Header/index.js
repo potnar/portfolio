@@ -24,14 +24,17 @@ const Header = (props) => {
     <div className="header-content" id="home">
       <div className="header-spacer"></div>
       <header>
-        <div className="title-text">
-          <h1> {props.title} </h1>
-
-          <p>
-            I'm Mikołaj and i would like to introduce you to world which is my
-            passion...
-          </p>
+        <div>
+          <div className="title-text">
+            <h1> {props.title} </h1>
+            <p>
+              I'm Mikołaj and i would like to introduce you to world which is my
+              passion...
+            </p>
+          </div>
+          <p className="bottom-text">JS / CSS / React / PHP</p>
         </div>
+
         <img className="img-comp" src={comp} alt="computer" />
         <Link
           activeClass="active-links"
