@@ -43,15 +43,17 @@
       &:after {
         content: "";
         position: absolute;
-        bottom: -22%;
+        bottom: -24%;
         right: -22%;
         z-index: -1;
-        background-image: radial-gradient($mustard 20%, transparent 20%),
-          radial-gradient($mustard 20%, transparent 20%);
-        background-position: 53px 14px, 82px 105px;
-        background-size: 60px 60px;
-        height: 61%;
-        width: 61%;
+        background-image: radial-gradient(
+          $font_color_hover 20%,
+          transparent 20%
+        );
+        background-position: 82px 105px;
+        background-size: 20px 24px;
+        height: 70%;
+        width: 70%;
       }
     }
   }

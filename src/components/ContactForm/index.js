@@ -29,6 +29,20 @@ class ContactForm extends React.Component {
     });
   }
 
+  onNameChange(e) {
+    this.setState({ name: e.target.value });
+  }
+
+  onEmailChange(e) {
+    this.setState({ email: e.target.value });
+  }
+
+  onMessageChange(e) {
+    this.setState({ message: e.target.value });
+  }
+
+  handleSubmit(event) {}
+
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
   }
@@ -85,18 +99,5 @@ class ContactForm extends React.Component {
       </section>
     );
   }
-  onNameChange(event) {
-    this.setState({ name: event.target.value });
-  }
-
-  onEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  onMessageChange(event) {
-    this.setState({ message: event.target.value });
-  }
-
-  handleSubmit(event) {}
 }
 export default ContactForm;

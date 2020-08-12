@@ -22,10 +22,10 @@ const AboutMe = () => {
               I am very ambitious person who would like to create something
               better. When I am in team i feel alive. I am very loyal person but
               I hate when somebody doesn't respect me and my opinion. I do my
-              best when. Not always I am perfect but try my best and learning on
-              my mistakes. I would like to be good Frontend Developer eventually
-              Fullstack developer. My skill in programming languages leave you
-              to evaluate...
+              best. Not always I am perfect but try my best and learning on my
+              mistakes. I would like to be better and better Frontend Developer
+              eventually Fullstack developer and still learn multitasking. My
+              skill in programming languages leave you to evaluate...
             </p>
             <p>
               My hobbies are computer games, riding a bicycle, volleyball,
