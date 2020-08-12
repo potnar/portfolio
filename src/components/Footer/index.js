@@ -14,13 +14,19 @@ const Footer = () => {
         <div className="col">
           <div className="socials">
             <IconContext.Provider value={{ className: "icons" }}>
-              <a href="https://www.linkedin.com/in/mikołaj-cholewa-4b909573/">
+              <a
+                href="https://www.linkedin.com/in/mikołaj-cholewa-4b909573/"
+                target="_blank"
+              >
                 <AiOutlineLinkedin size="1.6rem" />
               </a>
-              <a href="https://github.com/potnar">
+              <a href="https://github.com/potnar" target="_blank">
                 <AiOutlineGithub size="1.6rem" />
               </a>
-              <a href="https://pl-pl.facebook.com/people/Miko%C5%82aj-Cholewa/100000746907733/">
+              <a
+                href="https://pl-pl.facebook.com/people/Miko%C5%82aj-Cholewa/100000746907733/"
+                target="_blank"
+              >
                 <AiOutlineFacebook size="1.6rem" />
               </a>
             </IconContext.Provider>
