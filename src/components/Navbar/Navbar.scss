@@ -59,13 +59,13 @@ $navbar-height: 80px;
   padding-right: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-links {
     display: none;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
   .nav-toggle__button {
     display: none;
   }

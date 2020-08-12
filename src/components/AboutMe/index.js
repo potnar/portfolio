@@ -9,7 +9,6 @@ const AboutMe = () => {
       </nav>
       <div className="container">
         <div className="col">
-          <div className="bg-text">ABOUT</div>
           <article>
             <p>
               I'm Mikołaj (if you want to Nicolas ;) ), Frontend Developer from
@@ -18,6 +17,15 @@ const AboutMe = () => {
             <p>
               I studied on Electronic and Telecomunication faculty of studies on
               Warsaw University of Technology.
+            </p>
+            <p>
+              I am very ambitious person who would like to create something
+              better. When I am in team i feel alive. I am very loyal person but
+              I hate when somebody doesn't respect me and my opinion. I do my
+              best when. Not always I am perfect but try my best and learning on
+              my mistakes. I would like to be good Frontend Developer eventually
+              Fullstack developer. My skill in programming languages leave you
+              to evaluate...
             </p>
             <p>
               My hobbies are computer games, riding a bicycle, volleyball,
