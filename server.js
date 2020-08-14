@@ -1,7 +1,9 @@
 //zmienna środowiskowa to zmienna, którą możesz ustawić przed uruchomieniem programu. jest przechowywana w powłoce systemowej
 const dotenv = require("dotenv");
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+const { PORT } = process.env || 5001;
+const { USER } = process.env;
+const { PASS } = process.env;
 // importowanie biblioteki express w stylu es5
 const express = require("express");
 const path = require("path");
@@ -12,20 +14,25 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 
+app.use(cors());
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
-const loggerMiddleware = (req, res, next) => {
-  console.log(req.protocol + "://" + req.get("host") + req.originalUrl);
-  next();
-};
-app.use(loggerMiddleware);
+// const loggerMiddleware = (req, res, next) => {
+//   console.log(req.protocol + "://" + req.get("host") + req.originalUrl);
+//   next();
+// };
+// app.use(loggerMiddleware);
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/build/index.html"));
+});
 
 // od ścieżki apiRouter serwer ma rozpoznawać endpointy tak jak są zdefiniowane w routerze
 
-app.use(loggerMiddleware);
+// app.use(loggerMiddleware);
 
 // ^
 // api.get("/ideas") => app.get("/api/ideas")
@@ -36,34 +43,34 @@ app.use(loggerMiddleware);
 // tzn. najpierw są rozwiązywane ścieżki opisane wcześniej, a dopiero na końcu ta tutaj
 // (czyli de facto wszystkie inne niż powyżej)
 
-const transport = {
+let transport = {
   host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
   port: 587,
   auth: {
-    user: dotenv.USER,
-    pass: dotenv.PASS,
+    user: USER,
+    pass: PASS,
   },
 };
 
-const transporter = nodemailer.createTransport(transport);
+let transporter = nodemailer.createTransport(transport);
 
-transporter.verify((error, success) => {
-  if (error) {
-    console.log(error);
+transporter.verify((err, success) => {
+  if (err) {
+    console.log(err);
   } else {
     console.log("Server is ready to take messages");
   }
 });
 
-router.post("/", (req, res, next) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const content = `name: ${name} \n email: ${email} \n message: ${message} `;
+router.post("/send", (req, res, next) => {
+  let name = req.body.name;
+  let email = req.body.email;
+  let message = req.body.message;
+  let content = `name: ${name} \n email: ${email} \n message: ${message} `;
 
-  const mail = {
-    from: name,
-    to: "cholewamikolaj@gmail.com", // Change to email address that you want to receive messages on
+  let mail = {
+    from: email,
+    to: "potnar66@gmail.com", // Change to email address that you want to receive messages on
     subject: "New Message from Contact Form",
     text: content,
   };
@@ -71,7 +78,7 @@ router.post("/", (req, res, next) => {
   transporter.sendMail(mail, (err, data) => {
     if (err) {
       res.json({
-        status: "fail",
+        status: err,
       });
     } else {
       res.json({
@@ -80,11 +87,6 @@ router.post("/", (req, res, next) => {
     }
   });
 });
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/build/index.html"));
-});
 
-app.use(cors());
-app.use(express.json());
 app.use("/", router);
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
