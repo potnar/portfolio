@@ -15,16 +15,13 @@ class ContactForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    axios({
-      method: "POST",
-      url: "http://localhost:5000",
-      data: this.state,
-    }).then((response) => {
-      if (response.data.status === "success") {
-        alert("Message Sent.");
+    axios.post("http://localhost:5001/send", this.state).then((res) => {
+      console.log(res.data.status);
+      if (res.data.status === "success") {
+        console.log("Message Sent.");
         this.resetForm();
-      } else if (response.data.status === "fail") {
-        alert("Message failed to send.");
+      } else if (res.data.status === "fail") {
+        console.log("Message failed to send.");
       }
     });
   }
@@ -40,8 +37,6 @@ class ContactForm extends React.Component {
   onMessageChange(e) {
     this.setState({ message: e.target.value });
   }
-
-  handleSubmit(event) {}
 
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
