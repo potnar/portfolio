@@ -11,8 +11,8 @@ const AboutMe = () => {
         <div className="col">
           <article>
             <p>
-              I'm Mikołaj (if you want to Nicolas ;) ), Frontend Developer from
-              a passion. I'm living in Warsaw near to Szczesliwicki Park.
+              I'm Mikołaj, Frontend Developer with a passion. I'm living in
+              Warsaw near to Szczesliwicki Park.
             </p>
             <p>
               I studied on Electronic and Telecomunication faculty of studies on
