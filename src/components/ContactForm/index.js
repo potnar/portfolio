@@ -15,7 +15,12 @@ class ContactForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    axios.post("http://localhost:5001/send", this.state).then((res) => {
+    const apiBaseUrl =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5001"
+        : process.env.REACT_APP_API_BASE_URL;
+
+    axios.post(`${apiBaseUrl}/send`, this.state).then((res) => {
       console.log(res.data.status);
       if (res.data.status === "success") {
         console.log("Message Sent.");
