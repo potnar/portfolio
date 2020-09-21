@@ -2,8 +2,8 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const { PORT } = process.env || 5001;
-const { USER } = process.env;
-const { PASS } = process.env;
+const { MAIL_USER } = process.env;
+const { MAIL_PASS } = process.env;
 // importowanie biblioteki express w stylu es5
 const express = require("express");
 const path = require("path");
@@ -14,41 +14,32 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 
+
+const BUILD_PATH = path.join('/', 'var', 'www', 'html');
+
+console.log(BUILD_PATH);
+
+app.use((req, res, next) => {
+	console.log('host: ', req.get('host'));
+	next();
+});
+
 app.use(cors());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
-// const loggerMiddleware = (req, res, next) => {
-//   console.log(req.protocol + "://" + req.get("host") + req.originalUrl);
-//   next();
-// };
-// app.use(loggerMiddleware);
+
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/build/index.html"));
-});
+app.use(express.static(BUILD_PATH));
 
-// od ścieżki apiRouter serwer ma rozpoznawać endpointy tak jak są zdefiniowane w routerze
-
-// app.use(loggerMiddleware);
-
-// ^
-// api.get("/ideas") => app.get("/api/ideas")
-
-// tak samo jak w routerze "api" powyżej, definiujemy co serwer ma zwracać w odpowiedzi
-// na zapytanie typu "GET". "*" oznacza, że dla każdej możliwej ścieżki ma zwracać naszą stronę.
-// ponieważ nasz app.get znajduje się poniżej api, działa to podobnie jak w React routerze,
-// tzn. najpierw są rozwiązywane ścieżki opisane wcześniej, a dopiero na końcu ta tutaj
-// (czyli de facto wszystkie inne niż powyżej)
 
 let transport = {
-  host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
+  host: "smtp.gmail.com", 
   port: 587,
   auth: {
-    user: USER,
-    pass: PASS,
+    user: MAIL_USER,
+    pass: MAIL_PASS,
   },
 };
 
@@ -70,7 +61,7 @@ router.post("/send", (req, res, next) => {
 
   let mail = {
     from: email,
-    to: "potnar66@gmail.com", // Change to email address that you want to receive messages on
+    to: "potnar66@gmail.com", 
     subject: "New Message from Contact Form",
     text: content,
   };
@@ -89,4 +80,9 @@ router.post("/send", (req, res, next) => {
 });
 
 app.use("/", router);
+app.get("/", (req, res) => {
+  res.sendFile(path.join(BUILD_PATH, "index.html"));
+});
+
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
+
