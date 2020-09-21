@@ -14,11 +14,6 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 
-app.use((req, res, next) => {
-  console.log("host: ", req.get("host"));
-  next();
-});
-
 app.use(cors());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
