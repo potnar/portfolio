@@ -1,23 +1,18 @@
 //zmienna środowiskowa to zmienna, którą możesz ustawić przed uruchomieniem programu. jest przechowywana w powłoce systemowej
 const dotenv = require("dotenv");
+const path = require("path");
 dotenv.config();
 const { PORT } = process.env || 5001;
 const { MAIL_USER } = process.env;
 const { MAIL_PASS } = process.env;
-// importowanie biblioteki express w stylu es5
-const express = require("express");
-const path = require("path");
+const BUILD_PATH = path.join('/', 'var', 'www', 'html');
 
+const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-
-
-const BUILD_PATH = path.join('/', 'var', 'www', 'html');
-
-console.log(BUILD_PATH);
 
 app.use((req, res, next) => {
 	console.log('host: ', req.get('host'));
