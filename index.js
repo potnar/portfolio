@@ -5,7 +5,7 @@ dotenv.config();
 const { PORT } = process.env || 5001;
 const { MAIL_USER } = process.env;
 const { MAIL_PASS } = process.env;
-const BUILD_PATH = path.join('/', 'var', 'www', 'html');
+const { BUILD_PATH } = process.env;
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -15,8 +15,8 @@ const cors = require("cors");
 const app = express();
 
 app.use((req, res, next) => {
-	console.log('host: ', req.get('host'));
-	next();
+  console.log("host: ", req.get("host"));
+  next();
 });
 
 app.use(cors());
@@ -28,9 +28,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.static(BUILD_PATH));
 
-
 let transport = {
-  host: "smtp.gmail.com", 
+  host: "smtp.gmail.com",
   port: 587,
   auth: {
     user: MAIL_USER,
@@ -56,7 +55,7 @@ router.post("/send", (req, res, next) => {
 
   let mail = {
     from: email,
-    to: "potnar66@gmail.com", 
+    to: "potnar66@gmail.com",
     subject: "New Message from Contact Form",
     text: content,
   };
@@ -80,4 +79,3 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
-
