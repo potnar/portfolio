@@ -5,7 +5,7 @@ dotenv.config();
 const { PORT } = process.env || 5001;
 const { MAIL_USER } = process.env;
 const { MAIL_PASS } = process.env;
-const { BUILD_PATH } = process.env;
+const BUILD_PATH = path.join("/", "var", "www", "html");
 
 const express = require("express");
 const bodyParser = require("body-parser");
