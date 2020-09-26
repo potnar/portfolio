@@ -2,27 +2,15 @@ import React from "react";
 import "./Header.scss";
 import comp from "../assets/komp.svg";
 import { Link } from "react-scroll";
-// import React, { useRef } from "react";
+import Particles from "../ParticleComponent";
 
-// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
-// // General scroll to element function
-
-// const ScrollDemo = () => {
-
-//    const myRef = useRef(null)
-//    const executeScroll = () => scrollToRef(myRef)
-
-//    return (
-//       <>
-//          <div ref={myRef}>I wanna be seen</div>
-//          <button onClick={executeScroll}> Click to scroll </button>
-//       </>
-//    )
-// }
 const Header = (props) => {
   return (
     <div className="header-content" id="home">
       <div className="header-spacer"></div>
+      <div className="particles-container">
+        <Particles />
+      </div>
       <header>
         <div>
           <div className="title-text">
