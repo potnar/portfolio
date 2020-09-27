@@ -36,7 +36,7 @@ class Portfolio extends Component {
         {this.state.topDrawerOpen && (
           <Backdrop click={this.backdropClickHandler} />
         )}
-        <Header title="Junior Frontend Developer" />
+        <Header title="Frontend Developer" />
         <AboutMe />
         <Content />
         <Technologies />

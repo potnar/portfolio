@@ -1,0 +1,12 @@
+@import "../Navbar/Navbar.scss";
+@import "../../shared/styles/layout.scss";
+@import "../../shared/styles/colors.scss";
+
+.particles-container {
+  canvas {
+    position: fixed !important;
+    z-index: -1;
+    left: 0;
+    top: $navbar-height;
+  }
+}

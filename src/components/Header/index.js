@@ -8,9 +8,7 @@ const Header = (props) => {
   return (
     <div className="header-content" id="home">
       <div className="header-spacer"></div>
-      <div className="particles-container">
-        <Particles />
-      </div>
+      <Particles />
       <header>
         <div>
           <div className="title-text">
