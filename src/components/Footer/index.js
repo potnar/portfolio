@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="links">
             <h3>Portfolio:</h3>
             <p>
-              <a href="https://github.com/potnar/portfolio">
+              <a href="https://github.com/potnar/portfolio" target="_blank">
                 github.com/potnar/portfolio
               </a>
             </p>
