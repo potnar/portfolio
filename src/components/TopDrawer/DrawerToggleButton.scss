@@ -1,8 +1,7 @@
 .toggle-button {
-  width: 60px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   position: relative;
-  margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -29,7 +28,7 @@
     -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
     &:nth-child(even) {
-      left: 50%;
+      left: 20%;
       border-radius: 0 9px 9px 0;
     }
     &:nth-child(odd) {
