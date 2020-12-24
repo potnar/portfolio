@@ -1,8 +1,10 @@
 .carousel__wrapper {
   overflow-x: hidden;
   width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
   position: relative;
-  padding: 20px 0;
   .carousel {
     display: flex;
     width: calc(var(--n) * 100vw);
