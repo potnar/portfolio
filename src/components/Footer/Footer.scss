@@ -1,6 +1,10 @@
+@import "../../shared/styles/colors";
+@import "../../shared/styles/fonts";
+
 footer {
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
   padding: 1.25rem 0;
+  background: $mainColor;
   .container {
     display: flex;
     color: #60afff;
