@@ -4,7 +4,7 @@
 
 .particles-container {
   canvas {
-    position: fixed !important;
+    position: absolute;
     z-index: -1;
     left: 0;
     top: $navbar-height;
