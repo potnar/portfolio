@@ -9,30 +9,62 @@ class ContactForm extends React.Component {
       name: "",
       email: "",
       message: "",
+      nameError: "",
+      emailError: "",
+      messageError: "",
     };
   }
 
   handleSubmit(e) {
     e.preventDefault();
 
-    const apiBaseUrl =
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:5001"
-        : process.env.REACT_APP_API_BASE_URL;
+    const isValid = this.validate();
+    if (isValid) {
+      const apiBaseUrl =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:5001"
+          : process.env.REACT_APP_API_BASE_URL;
 
-    axios.post(`${apiBaseUrl}/send`, this.state).then((res) => {
-      console.log(res.data.status);
-      if (res.data.status === "success") {
-        console.log("Message Sent.");
-        this.resetForm();
-      } else if (res.data.status === "fail") {
-        console.log("Message failed to send.");
-      }
-    });
+      axios.post(`${apiBaseUrl}/send`, this.state).then((res) => {
+        if (res.data.status === "success") {
+          this.resetForm();
+        } else if (res.data.status === "fail") {
+        }
+      });
+    }
   }
+
+  validate = () => {
+    let nameError = "";
+    let emailError = "";
+    let messageError = "";
+
+    if (!this.state.name) {
+      nameError = "name cannot be blank";
+    }
+
+    if (!this.state.message) {
+      messageError = "message cannot be blank";
+    }
+
+    if (!this.state.email) {
+      emailError = "email cannot be blank";
+    } else if (!this.state.email.includes("@")) {
+      emailError = "invalid email";
+    }
+
+    if (emailError || nameError || messageError) {
+      this.setState({ emailError, nameError, messageError });
+      return false;
+    }
+
+    return true;
+  };
 
   onNameChange(e) {
     this.setState({ name: e.target.value });
+    if ((e.target.value = "")) {
+    }
   }
 
   onEmailChange(e) {
@@ -44,7 +76,14 @@ class ContactForm extends React.Component {
   }
 
   resetForm() {
-    this.setState({ name: "", email: "", message: "" });
+    this.setState({
+      name: "",
+      email: "",
+      message: "",
+      emailError: "",
+      messageError: "",
+      nameError: "",
+    });
   }
 
   render() {
@@ -60,23 +99,29 @@ class ContactForm extends React.Component {
             method="POST"
           >
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label>Name</label>
               <input
                 type="text"
                 className="form-control"
                 value={this.state.name}
                 onChange={this.onNameChange.bind(this)}
+                placeholder="Enter your name"
               />
+              <div className="error">{this.state.nameError}</div>
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email address</label>
               <input
-                type="email"
+                type="text"
                 className="form-control"
                 aria-describedby="emailHelp"
                 value={this.state.email}
                 onChange={this.onEmailChange.bind(this)}
+                placeholder="Enter your email"
               />
+              {this.state.emailError ? (
+                <div className="error">{this.state.emailError}</div>
+              ) : null}
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
@@ -85,7 +130,9 @@ class ContactForm extends React.Component {
                 rows="5"
                 value={this.state.message}
                 onChange={this.onMessageChange.bind(this)}
+                placeholder="Enter your message"
               />
+              <div className="error">{this.state.messageError}</div>
             </div>
             <div className="btn-container">
               <div className="btn">
