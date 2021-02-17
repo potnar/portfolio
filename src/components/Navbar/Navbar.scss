@@ -25,7 +25,8 @@ $navbar-height: 50px;
       flex: 1;
     }
     &:last-child {
-      padding-right: 30px;
+      padding-right: 5px;
+      padding-bottom: 10px;
     }
     ul {
       list-style: none;
@@ -59,13 +60,13 @@ $navbar-height: 50px;
   padding-right: 20px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 772px) {
   .nav-links {
     display: none;
   }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 773px) {
   .nav-toggle__button {
     display: none;
   }
