@@ -16,6 +16,7 @@ const ProjectFamily = props => {
             title={project.title}
             imgSrc={project.imgSrc}
             description={project.desc}
+            link={project.link}
           />
         );
       })}

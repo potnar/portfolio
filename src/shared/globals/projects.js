@@ -5,18 +5,28 @@ export default [
     title: "React",
     projects: [
       {
-        title: "Sticky Note",
+        title: "Sticky Notes",
+        link: "",
         imgSrc:
-          "https://www.lifewire.com/thmb/Fj7HGv5VgAZ7M4yCBiMG05GlL34=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1086740226-5c2d625a4cedfd00016ed36c.jpg",
+          "/img/ui.png",
         desc: "Sticky note list to save ideas",
       },
 
       {
         title: "imgs",
+        link: "https://react-imgs.herokuapp.com",
         imgSrc:
-          "https://www.lifewire.com/thmb/Fj7HGv5VgAZ7M4yCBiMG05GlL34=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1086740226-5c2d625a4cedfd00016ed36c.jpg",
+          "/img/react-imgs.png",
         desc:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Images browser with axios and unsplash librairy",
+      },
+      {
+        title: "yt-videos",
+        link: "https://yt-videos.herokuapp.com",
+        imgSrc:
+          "/img/yt.png",
+        desc:
+          "Video browser like YouTube. Used axios, yt API.",
       },
     ],
   },
