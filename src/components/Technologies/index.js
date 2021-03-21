@@ -55,7 +55,7 @@ const Technologies = () => {
             <article>
               <h3>CSS3</h3>
               <p>
-                Knowledge about
+                Knowledge about BEM and animations, CSS frameworks like Bulma or Bootstrap.
               </p>
             </article>
             <picture>
