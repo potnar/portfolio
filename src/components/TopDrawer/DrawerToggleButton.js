@@ -6,7 +6,7 @@ const DrawerToggleButton = props => {
 
   if (props.anim) {
     toggleClasses = "toggle-button active";
-    console.log(props.anim);
+
   }
   return (
     <div className={toggleClasses} onClick={props.click}>
