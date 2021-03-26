@@ -9,7 +9,7 @@ export default [
         link: "",
         imgSrc:
           "/img/ui.png",
-        desc: "Sticky note list to save ideas",
+        desc: "In progress...",
       },
 
       {
