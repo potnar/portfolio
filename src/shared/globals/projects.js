@@ -34,19 +34,21 @@ export default [
     title: "Wordpress",
     projects: [
       {
-        title: "Lorem Ipsum",
+        title: "Elearning Fusion",
+        link: "https://www.elearning-fusion.pl",
         imgSrc:
-          "https://babeltechreviews.com/wp-content/uploads/2018/07/rendition1.img_.jpg",
+          "/img/fusion.png",
         desc:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "I made this project with one other person and I cooperate with graphic designers. I used PHP, WORDPRESS, HTML, CSS and JavaScript",
       },
 
       {
-        title: "imgs",
+        title: "DLC",
+        link: "https://dlc.org.pl",
         imgSrc:
-          "https://www.lifewire.com/thmb/Fj7HGv5VgAZ7M4yCBiMG05GlL34=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1086740226-5c2d625a4cedfd00016ed36c.jpg",
+          "/img/dlc.png",
         desc:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "I made this project with one other person and I cooperate with graphic designers. I used PHP, WORDPRESS, HTML, CSS and JavaScript",
       },
     ],
   },
@@ -74,11 +76,12 @@ export default [
     title: "Other",
     projects: [
       {
-        title: "Lorem Ipsum",
+        title: "krewki",
+        link: "https://krewki.pl",
         imgSrc:
-          "https://babeltechreviews.com/wp-content/uploads/2018/07/rendition1.img_.jpg",
+          "/img/krewki.png",
         desc:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "I worked with a team on this project and I made section with map with JavaScript, HTML, CSS",
       },
 
       {
