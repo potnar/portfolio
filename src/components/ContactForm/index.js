@@ -22,7 +22,7 @@ class ContactForm extends React.Component {
     if (isValid) {
       const apiBaseUrl =
         process.env.NODE_ENV === "development"
-          ? "http://localhost:5001"
+          ? "siema"
           : process.env.REACT_APP_API_BASE_URL;
 
       axios.post(`${apiBaseUrl}/send`, this.state).then((res) => {
