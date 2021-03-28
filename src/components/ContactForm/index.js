@@ -20,12 +20,12 @@ class ContactForm extends React.Component {
 
     const isValid = this.validate();
     if (isValid) {
-      // const apiBaseUrl =
-      //   process.env.NODE_ENV === "development"
-      //     ? "http://localhost:5001"
-      //     : process.env.REACT_APP_API_BASE_URL;
+      const apiBaseUrl =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:5001"
+          : process.env.REACT_APP_API_BASE_URL;
 
-      axios.post(`/send`, this.state).then((res) => {
+      axios.post(`${apiBaseUrl}/send`, this.state).then((res) => {
         if (res.data.status === "success") {
           this.resetForm();
         } else if (res.data.status === "fail") {
