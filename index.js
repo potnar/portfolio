@@ -64,7 +64,7 @@ router.post("/send", (req, res, next) => {
         status: err,
       });
     } else {
-      console.log("Success");
+      console.log("Successss");
       res.json({
         status: "success",
       });
