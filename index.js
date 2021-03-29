@@ -30,10 +30,6 @@ let transport = {
   auth: {
     user: MAIL_USER,
     pass: MAIL_PASS,
-  },
-  tls: {
-    // do not fail on invalid certs
-    rejectUnauthorized: false
   }
 };
 
