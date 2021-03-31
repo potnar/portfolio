@@ -57,6 +57,7 @@ router.post("/send", (req, res, next) => {
   };
 
   transporter.sendMail(mail, (err, data) => {
+    console.log(mail)
     console.log("Sent");
     if (err) {
       console.error(err);
