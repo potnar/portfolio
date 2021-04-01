@@ -4,13 +4,7 @@ export default [
   {
     title: "React",
     projects: [
-      {
-        title: "Sticky Notes",
-        link: "",
-        imgSrc:
-          "/img/ui.png",
-        desc: "In progress...",
-      },
+
 
       {
         title: "imgs",
@@ -27,6 +21,13 @@ export default [
           "/img/yt.png",
         desc:
           "Video browser like YouTube. Used axios, yt API.",
+      },
+      {
+        title: "Sticky Notes",
+        link: "",
+        imgSrc:
+          "/img/ui.png",
+        desc: "In progress...",
       },
     ],
   },
