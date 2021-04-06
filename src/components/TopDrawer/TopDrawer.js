@@ -10,7 +10,7 @@ const TopDrawer = (props) => {
   return (
     <nav className={drawerClasses}>
       <div className="spacer"></div>
-      <NavLinks />
+      <NavLinks click={props.drawerClickHandler} />
     </nav>
   );
 };

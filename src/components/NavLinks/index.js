@@ -8,8 +8,9 @@ const NavLinks = (props) => {
       <ul>
         {sections.map((section) => {
           return (
-            <li>
+            <li >
               <Link
+                onClick={props.click}
                 activeClass="active-links"
                 to={section.link}
                 spy={true}

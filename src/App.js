@@ -32,7 +32,7 @@ class Portfolio extends Component {
           drawerClickHandler={this.drawerToggleClickHandler}
           anim={this.state.topDrawerOpen}
         />
-        <TopDrawer show={this.state.topDrawerOpen} />
+        <TopDrawer show={this.state.topDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler} />
         {this.state.topDrawerOpen && (
           <Backdrop click={this.backdropClickHandler} />
         )}
