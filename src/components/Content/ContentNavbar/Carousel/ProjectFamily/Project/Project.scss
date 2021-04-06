@@ -23,6 +23,9 @@
     // right: 0;
     // bottom: 0;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #111;
     opacity: 0;
     transition: opacity 0.4s;
@@ -30,15 +33,28 @@
       transition: font-size 0.4s;
       padding: 10px;
       background: #e6e6e6;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
       text-align: center;
       p {
         margin: 0;
         padding: 0;
+      }
+    }
+    .btns {
+      padding-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      button {
+        cursor: pointer;
+        border-radius: 15px;
+        background: #0d6ed6;
+        color: #e6e6e6;
+        padding: 10px 15px;
+        font-weight: 600;
+        &:first-child {
+          margin-right: 10px;
+        }
       }
     }
   }

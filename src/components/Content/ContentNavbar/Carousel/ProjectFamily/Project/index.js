@@ -24,15 +24,18 @@ const Project = props => {
           <img src={props.imgSrc}>{ }</img>
         </div>
           <div className="desc-box">
+            <div className="spacer"></div>
             <div className="desc">
               <p>{props.description}</p>
             </div>
-            <button onClick={() => {
-              redirectToURL(props.link).then(res => {
-                window.open(res, "_blank")
-              })
-            }}>VIEW DEMO</button>
-            <button >VIEW REPO</button>
+            <div className="btns">
+              <button onClick={() => {
+                redirectToURL(props.link).then(res => {
+                  window.open(res, "_blank")
+                })
+              }}>VIEW DEMO</button>
+              <button onClick={() => { window.open(props.gitLink, "_blank") }}>VIEW REPO</button>
+            </div>
           </div>
         </>
       }
