@@ -67,8 +67,10 @@
     }
   }
   .desc-box {
-    opacity: 0.7;
+    opacity: 1;
     .desc {
+      opacity: 0.75;
+      transition: all 0.4s;
       font-size: 1.2em;
     }
   }
