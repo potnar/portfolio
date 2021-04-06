@@ -1,7 +1,6 @@
 import React from "react";
 import "./ProjectFamily.scss";
 import Project from "./Project";
-import PropTypes from "prop-types";
 
 const ProjectFamily = props => {
   const { projects } = props;
@@ -17,6 +16,7 @@ const ProjectFamily = props => {
             imgSrc={project.imgSrc}
             description={project.desc}
             link={project.link}
+            gitLink={project.gitLink}
           />
         );
       })}

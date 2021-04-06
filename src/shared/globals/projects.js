@@ -4,11 +4,10 @@ export default [
   {
     title: "React",
     projects: [
-
-
       {
         title: "imgs",
         link: "https://react-imgs.herokuapp.com",
+        gitLink: "https://github.com/potnar/react-imgs",
         imgSrc:
           "/img/react-imgs.png",
         desc:
@@ -17,6 +16,7 @@ export default [
       {
         title: "yt-videos",
         link: "https://yt-videos.herokuapp.com",
+        gitLink: "https://github.com/potnar/yt-videos",
         imgSrc:
           "/img/yt.png",
         desc:
@@ -25,6 +25,7 @@ export default [
       {
         title: "Sticky Notes",
         link: "",
+        gitLink: "https://github.com/potnar/mern_ideas",
         imgSrc:
           "/img/ui.png",
         desc: "In progress...",
@@ -37,6 +38,7 @@ export default [
       {
         title: "Elearning Fusion",
         link: "https://www.elearning-fusion.pl",
+        gitLink: "",
         imgSrc:
           "/img/fusion.png",
         desc:
