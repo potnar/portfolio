@@ -34,7 +34,7 @@ const Project = props => {
                   window.open(res, "_blank")
                 })
               }}>VIEW DEMO</button>
-              <button onClick={() => { window.open(props.gitLink, "_blank") }}>VIEW REPO</button>
+              {props.gitLink ? <button onClick={() => { window.open(props.gitLink, "_blank") }}>VIEW REPO</button> : ""}
             </div>
           </div>
         </>
