@@ -24,7 +24,7 @@ export default [
       },
       {
         title: "Sticky Notes",
-        link: "",
+        link: "https://ideas-mern.herokuapp.com",
         gitLink: "https://github.com/potnar/mern_ideas",
         imgSrc:
           "/img/ui.png",
