@@ -36,6 +36,14 @@ export default [
     title: "Wordpress",
     projects: [
       {
+        title: "perfekcyjne okienko",
+        link: "https://perfekcyjneokienko.pl/",
+        imgSrc:
+          "/img/perfekcyjne.png",
+        desc:
+          "I made this project base on old version and tried to improve. I used PHP, WORDPRESS, HTML, CSS and JavaScript",
+      },
+      {
         title: "Elearning Fusion",
         link: "https://www.elearning-fusion.pl",
         gitLink: "",
