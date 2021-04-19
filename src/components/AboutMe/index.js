@@ -11,25 +11,23 @@ const AboutMe = () => {
         <div className="col">
           <article>
             <p>
-              I'm Mikołaj, Frontend Developer with a passion. I'm living in
-              Warsaw near to Szczesliwicki Park.
+              I'm Mikołaj, committed and hardworking Frontend Developer I live in
+              Warsaw near Szczesliwicki Park.
             </p>
             <p>
-              I studied on Electronic and Telecomunication faculty of studies on
+              I studied at the Electronic and Telecommunication faculty at the
               Warsaw University of Technology.
             </p>
             <p>
-              I am very ambitious person who would like to create something
-              better. When I am in team i feel alive. I am very loyal person but
-              I hate when somebody doesn't respect me and my opinion. I do my
-              best. Not always I am perfect but try my best and learning on my
-              mistakes. I would like to be better and better Frontend Developer
-              eventually Fullstack developer and still learn multitasking. My
-              skill in programming languages leave you to evaluate...
+              I am very ambitious and I always try to create something better. When I am a part of the team I feel
+              alive. I am very loyal, but I hate when somebody doesn't respect me and my opinions. I always do my
+              best. It doesn’t mean I’m perfect, but I always give 100% to everything I do and I try to learn from my
+              mistakes. I would like to become a better Frontend Developer, eventually move to a Full stack
+              Developer position and continually improve my multitasking skills. Below are some examples of my
+              programming languages skills.
             </p>
             <p>
-              My hobbies are computer games, riding a bicycle, volleyball,
-              football(soccer) and cars.
+              My hobbies are: computer games, riding a bicycle, volleyball, football (soccer) and cars.
             </p>
           </article>
         </div>

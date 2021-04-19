@@ -14,8 +14,8 @@ const Header = (props) => {
           <div className="title-text">
             <h1> {props.title} </h1>
             <p>
-              I'm Mikołaj and i would like to introduce you to world which is my
-              passion...
+              My name is Mikołaj and I would like to introduce you to programming, my greatest passion.
+
             </p>
           </div>
           <p className="bottom-text">JS / CSS / React / PHP</p>
