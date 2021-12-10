@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import "./Project.scss";
-import Loader from "./Loader"
-import axios from "axios"
+import Loader from "./Loader";
+import axios from "axios";
 
 const Project = props => {
   const [loading, setLoading] = useState(false)
   const redirectToURL = (link) => {
     setLoading(true)
     return new Promise((resolve, reject) => {
-      axios.get(link).then(resp => {
-        return resp
-      }).catch(err => {
-        resolve(link)
-        console.clear();
-        setLoading(false)
-      })
+      axios
+        .get(link).then(resp => {
+          resolve(link)
+          setLoading(false)
+          return resp
+        }).catch(err => {
+          resolve(link)
+          console.clear();
+          setLoading(false)
+        })
     })
   }
   return (
     <div className="project">
       {loading ? <Loader /> :
         <><div className="img-box">
-          <img src={props.imgSrc}>{ }</img>
+          <img src={props.imgSrc} />
         </div>
           <div className="desc-box">
             <div className="spacer"></div>
