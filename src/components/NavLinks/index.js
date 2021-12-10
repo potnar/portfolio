@@ -15,7 +15,7 @@ const NavLinks = (props) => {
                 to={section.link}
                 spy={true}
                 smooth={true}
-                offset={-65}
+                offset={-95}
                 duration={100}
               >
                 {section.section}
