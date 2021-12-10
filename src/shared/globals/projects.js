@@ -6,7 +6,7 @@ export default [
     projects: [
       {
         title: "imgs",
-        link: "https://react-imgs.herokuapp.com",
+        link: "http://react-imgs.herokuapp.com",
         gitLink: "https://github.com/potnar/react-imgs",
         imgSrc:
           "/img/react-imgs.png",
