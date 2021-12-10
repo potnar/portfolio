@@ -46,14 +46,16 @@
       justify-content: center;
       align-items: flex-start;
       button {
+        border: none;
         cursor: pointer;
         border-radius: 15px;
         background: #0d6ed6;
         color: #e6e6e6;
         padding: 10px 15px;
         font-weight: 600;
+        box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 1);
         &:first-child {
-          margin-right: 10px;
+          margin-right: 20px;
         }
       }
     }
