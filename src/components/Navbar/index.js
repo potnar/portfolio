@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import logo from "../assets/logo/Logo2.svg";
+import logo from "../assets/logo/Logo1.svg";
 import DrawerToggleButton from "../TopDrawer/DrawerToggleButton";
 import NavLinks from "../NavLinks";
 
